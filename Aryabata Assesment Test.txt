@@ -1,0 +1,341 @@
+The Test is divided into 2 sections. The first section has MCQ’s on Java, each question carries 1 marks, And the second section has 5 coding challenges , each question carries 18 marks.   
+
+
+Time Duration : 3hours 
+
+Section-1
+
+1. Given: 
+StringBuilder sb1 = new StringBuilder("123"); 
+String s1 = "123"; 
+// insert code here 
+System.out.println(sb1 + " " + s1); 
+Which code fragment, inserted at line 24, outputs "123abc 123abc"? 
+A. sb1.append("abc"); s1.append("abc"); 
+B. sb1.append("abc"); s1.concat("abc"); 
+C. sb1.concat("abc"); s1.append("abc"); 
+D. sb1.concat("abc"); s1.concat("abc"); 
+E. sb1.append("abc"); s1 = s1.concat("abc"); 
+F. sb1.concat("abc"); s1 = s1.concat("abc"); 
+
+
+2. public class TypeConversion {
+    public static void main(String[] args) {
+        long a = 100;
+        float b = 5.2f;
+
+        // What is the result of the following expression?
+        // A. a = b;
+        // B. b = a;
+        // C. a = (long) b;
+        // D. b = (float) a;
+    }
+}
+
+
+
+3.Find the output of the following code.
+
+int Integer = 24;
+char String  = ‘I’;
+System.out.print(Integer);
+System.out.print(String);
+
+a)compile error
+b)Throws Exception
+c)I
+d)24 I
+
+4.What will be the output of the following Java code?
+
+    class increment {
+        public static void main(String args[]) 
+        {        
+             int g = 3;
+             System.out.print(++g * 8);
+        } 
+    }
+
+a) 32
+b) 33
+c) 24
+d) 25
+
+
+5. What will be the output of the following Java program?
+
+    class variable_scope 
+    {
+        public static void main(String args[]) 
+        {
+            int x;
+            x = 5;
+            {
+	        int y = 6;
+	        System.out.print(x + " " + y);
+            }
+            System.out.println(x + " " + y);
+        } 
+    }
+a) Compilation error
+b) Runtime error
+c) 5 6 5 6
+d) 5 6 5
+
+6.What will be the output of the following Java code?
+
+    class String_demo 
+    {
+        public static void main(String args[])
+        {
+            char chars[] = {'a', 'b', 'c'};
+            String s = new String(chars);
+            System.out.println(s);
+        }
+   }
+
+a) abc
+b) a
+c) b
+d) c
+
+7)What will be the output of the following Java code?
+
+    class output 
+    {
+        public static void main(String args[])
+        { 
+           String c = "Hello i love java";
+           boolean var;
+           var = c.startsWith("hello");
+           System.out.println(var);
+        }
+    }
+a) 0
+b) true
+c) 1
+d) false
+
+8) What will be the output of the following Java code?
+
+    class Output 
+    {
+         public static void main(String args[]) 
+         {
+             double x = 3.14;  
+             int y = (int) Math.ceil(x);
+             System.out.print(y);
+         }
+    }
+a) 3
+b) 0
+c) 4
+d) 3.0
+
+9)What will be the output of the following Java program?
+
+    class Output 
+    {
+        public static void main(String args[])
+        {
+            int arr[] = {1, 2, 3, 4, 5};
+            for ( int i = 0; i < arr.length - 2; ++i)
+                System.out.println(arr[i] + " ");
+        } 
+    }
+a) 1 2 3 4 5
+b) 1 2 3 4
+c) 1 2
+d) 1 2 3
+
+10.Identify the correct restriction on static methods.
+
+I) They must access only static data
+II) They can only call other static methods.
+III) They cannot refer to this or super.
+
+a)I and II
+b)II and III
+c)III and I
+d)I, II and III
+
+
+SECTION-2
+
+Challenge:1
+
+Sophie, a college student, urgently needs cash to buy her textbooks. She heads to the nearest ATM to withdraw money. The ATM allows withdrawal of denominations 500, 200, and 100. However, Sophie needs a specific amount of money and wants to withdraw it with the minimum number of notes. 
+
+The ATM will only dispense money if the requested amount is a multiple of 100. 
+
+If Sophie needs to withdraw Rs. 3700 from the ATM, how many minimum notes of denominations 500, 200, and 100 will she get? Can you write a program to calculate the minimum number of notes required to dispense the requested amount? 
+
+Input Format 
+
+2400 (integer value) 
+
+Constraints 
+
+100<= amount <=10000  
+
+Entered amount should be positive and only Integers. 
+
+Output Format 
+
+3 (integer value) 
+
+Sample Input 0: 
+
+3700 
+
+Sample Output 0: 
+
+8 
+
+Sample Input 1: 
+
+750 
+
+Sample Output 1: 
+
+Entered Amount must be multiples of 100 
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Challenge:2
+
+You are working on a project that involves analyzing data from sensors installed on a wind turbine. The data is stored in an array, and you have noticed that the data has a periodic pattern that repeats every n data points, where n is a positive integer. To better analyze the data, You need to shift the elements in the array to the left by m positions, such that the first m elements are moved to the end of the array, and the remaining elements are shifted to the left by m positions, such that the original mth element becomes the first element in the new array. 
+
+Implement a Java program to achieve above? 
+
+Input Format 
+
+The input consists of Three lines  
+
+The first line contains integer n, where n is the length of the array (1 ≤ n ≤ 10^5)  
+
+The Second line contains n space-separated integers a1, a2, ..., an representing the array of integers (-10^9 ≤ ai ≤ 10^9). 
+
+The Third line contains integer  m(1 ≤m ≤ 10^5), 
+
+Output Format 
+
+The output is the modified Array satisfying the above requirements. 
+
+Sample Input1 : 
+
+10 
+
+1 2 3 4 5 6 7 8 9 10 
+
+4 
+
+Sample Output1: 
+
+5 6 7 8 9 10 1 2 3 4 
+
+Sample Input2 : 
+
+10 
+
+1 2 3 4 5 6 7 8 9 10 
+
+2 
+
+Sample Output2 
+
+3 4 5 6 7 8 9 10 1 2 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Challenge 3:
+
+ As a secret agent, you need to send and receive classified messages securely. You've received a message "HELLO" from Agent Y that needs encryption. Using your Java program with a key of 3, you encrypt the message to "KHOOR." This secure encryption ensures your communications are safe from prying eyes during transmission. Agent Y can decrypt it with the same key on the other end. 
+
+ Your program should provide the following functionality: 
+
+ Accept an input string message from the user. 
+
+Accept an encryption key (an integer) from the user. 
+
+Encrypt the message by shifting each character in the message by the key positions. 
+
+Output the encrypted message. 
+
+  
+
+Expected Input: 
+
+- Enter the message to encrypt: "HELLO" 
+
+- Enter the encryption key (an integer): 3 
+
+Expected Output: 
+
+- Encrypted Message: "KHOOR" 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Challenge 4:
+
+Create a program that maintains an array of Student objects. Each Student object should have a studentId, studentName, rollNo, mobileNumber, marks, and address. After inputting the data for two students, the program should display the data for all two students.
+
+Here's an example input and output for the program: 
+----------------------------------------------------------- 
+Sample Input: 
+------- 
+Enter how many students do you want to add : 2
+ 
+Enter data for student 1: 
+Student ID: 12345 
+Name: John Smith 
+Roll number: 101 
+Mobile: 934637673 
+Marks: 87.5 
+Address: 123 Main St, Anytown USA 
+ 
+Enter data for student 2: 
+Student ID: 56784 
+Name: Jane Doe 
+Roll number: 102 
+Mobile: 928972973 
+Marks: 92.0 
+Address: 456 Elm St, Anytown USA
+ 
+Output: 
+-------- 
+Student details are:
+Student ID: 12345
+Name: John Smith 
+Roll number: 101 
+Mobile: 934637673
+Marks: 87.5 
+Address: 123 Main St, Anytown USA 
+
+Student ID: 56784 
+Name: Jane Doe 
+Roll number: 102 
+Mobile: 928972973 
+Marks: 92.0 
+Address: 456 Elm St, Anytown USA
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Challenge 5:
+
+As a manager of a book shop, you are responsible for managing all the operations related to books in the shop. You have a system that stores all the book details(book_id, title, author, price) in an ArrayList of Book objects. 
+
+Your task is to create a Java program that helps you manage the book shop efficiently.  
+
+Create a console-based menu-driven program that allows the user to perform the following operations: 
+
+1. Add books 
+
+2. Calculate total price of all books 
+
+3. Remove a book by book_id 
+
+4. Update book price by book_id 
+
+5. Search books by author 
+
+6. Quit the program 
+
+If no books are found for the given author name, the method should throw a custom exception called BookNotFoundException with an appropriate error message. 
+
+Each menu option should call the corresponding method and display the results or appropriate error messages. 
